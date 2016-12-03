@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Weathered",
+  "description": "An extension for seeing local weather",
+  "version": "1.0",
+  "description": "A plain text description",
+  "browser_action": {
+    "default_title": "Click for weather!",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "geolocation",
+    "https://ajax.googleapis.com/",
+    "contentSettings",
+    "https://api.openweathermap.org/data/*"
+  ]
+}
