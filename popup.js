@@ -17,10 +17,11 @@ const getLocalWeather = (latitude, longitude) => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}`,
     { method: 'GET', mode: 'cors'})
   .then((response) => {
+    //this response doesn't have a body but all the status is OK and that's the right api. Any idea what's wrong?
     console.log(response)
   })
   .catch(function(err) {
-});
+  });
 }
 
 
