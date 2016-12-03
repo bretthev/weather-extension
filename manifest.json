@@ -13,6 +13,6 @@
     "geolocation",
     "https://ajax.googleapis.com/",
     "contentSettings",
-    "https://api.openweathermap.org/data/*"
+    "*://*.api.openweathermap.org/*"
   ]
 }
