@@ -24,7 +24,6 @@ const getLocalWeather = (latitude, longitude) => {
     if (xhr.readyState == 4) {
       const response = JSON.parse(xhr.responseText);
       mainText.innerText = `It's ${response.main.temp} degrees in ${response.name} and ${response.weather[0].main.toLowerCase()}.`
-      console.log(response.weather[0].main)
       updateBackground(response.weather[0].main)
     }
   }
@@ -43,7 +42,7 @@ const updateBackground = (weather) => {
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4) {
       let response = JSON.parse(xhr.response)
-      response.urls.full ? localWeather.style.background = `url(${response.urls.full}) no-repeat center center fixed` : null
+      response.urls.full ? localWeather.style.background = `url(${response.urls.regular}) no-repeat center center fixed` : null
     }
     else {
       setDefaultBackground(weather)
@@ -52,4 +51,4 @@ const updateBackground = (weather) => {
   xhr.send()
 }
 
-getAndDisplayWeather() 
+getAndDisplayWeather()
