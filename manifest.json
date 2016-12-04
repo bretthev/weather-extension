@@ -15,5 +15,5 @@
     "contentSettings",
     "*://*.api.openweathermap.org/*",
     "*://*.api.unsplash.com//*"
-  ],
+  ]
 }
